@@ -21,6 +21,11 @@ Use the `localstack` CLI command to get your local AWS env started:
 localstack start -d
 ```
 
+## Git clone
+```bash
+git clone https://github.com/ShengzhenFu/go-lambda-apigateway-terraform.git
+cd go-lambda-apigateway-terraform
+```
 
 ## Deploy Lambda & APIGateway
 ```bash
