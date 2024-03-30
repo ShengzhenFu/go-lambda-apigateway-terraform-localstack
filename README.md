@@ -2,6 +2,10 @@
 
 Simple demo to provision Lambda (Golang) + APIGateway through Terraform and LocalStack
 
+## Why i make this demo
+1st, it's always nice for developers to be able to have a local dev env to test before shipping to the AWS cloud.
+2nd reason is AWS will bill you for the APIgateway, so if you only want to play around, by refer to my doc, it will cost you nothing at all. As everything is running on your own computer.
+
 ## Prerequisites
 
 * [LocalStack](https://docs.localstack.cloud/getting-started/installation/)
@@ -12,7 +16,7 @@ Simple demo to provision Lambda (Golang) + APIGateway through Terraform and Loca
 
 ## Running LocalStack
 
-Use the `localstack` CLI command to get started:
+Use the `localstack` CLI command to get your local AWS env started:
 ```
 localstack start -d
 ```
