@@ -53,3 +53,8 @@ you could also use tools like POSTMAN to test it.
 make destroy
 localstack stop
 ```
+
+### TODO
+- CDK implementation
+- CI/CD CodePipeline
+- Make a more practical demo of Golang project 
