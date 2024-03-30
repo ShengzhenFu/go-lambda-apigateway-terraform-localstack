@@ -1,6 +1,6 @@
 # LocalStack Demo
 
-Simple demo to provision Lambda (Golang) + APIGateway through Terraform and LocalStack
+Simple demo to provision AWS Lambda, APIGateway through Terraform and LocalStack
 
 ## Why i make this demo
 1st, it's always nice for developers to be able to have a local dev env to test before shipping to the AWS cloud.
