@@ -12,6 +12,7 @@ Simple demo to provision AWS Lambda, APIGateway through Terraform and LocalStack
 * [Docker](https://docs.docker.com/desktop/install/mac-install/)
 * [AWS Cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 * [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform)
+* [tfenv](https://github.com/tfutils/tfenv) 
 
 
 ## Running LocalStack
@@ -19,7 +20,19 @@ Simple demo to provision AWS Lambda, APIGateway through Terraform and LocalStack
 Use the `localstack` CLI command to get your local AWS env started:
 ```
 localstack start -d
+# setup aws profile for localstack https://docs.localstack.cloud/user-guide/integrations/aws-cli/#aws-cli
+# ~/.aws/config
+[profile localstack]
+region=us-east-1
+output=json
+endpoint_url = http://localhost:4566
+
+# ~/.aws/credentials
+[localstack]
+aws_access_key_id=test
+aws_secret_access_key=test
 ```
+
 
 ## Git clone
 ```bash
@@ -29,6 +42,9 @@ cd go-lambda-apigateway-terraform
 
 ## Deploy Lambda & APIGateway
 ```bash
+tfenv install 1.7.4
+tfenv use 1.7.4
+echo 1.7.4 > .terraform-version
 make deploy
 ```
 
